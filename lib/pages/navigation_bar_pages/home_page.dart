@@ -6,11 +6,12 @@ import 'dart:async';
 import 'package:vector_math/vector_math.dart' as math;
 
 class HomeMasterPage extends StatefulWidget {
-  const HomeMasterPage({Key? key, required this.works, this.services, this.text_of_reviews, this.like}) : super(key: key);
+  const HomeMasterPage({Key? key, required this.works, this.services, this.text_of_reviews, this.like, this.stars}) : super(key: key);
   final works;
   final services;
   final text_of_reviews;
   final like;
+  final stars;
 
   @override
   State<HomeMasterPage> createState() => _HomeMasterPageState();
@@ -18,10 +19,11 @@ class HomeMasterPage extends StatefulWidget {
 
 class _HomeMasterPageState extends State<HomeMasterPage> {
 
-  final _animationDuration = const Duration(milliseconds: 500);
+  final _animationDuration = const Duration(milliseconds: 300);
   late Timer _timer;
   late Color _color;
   late final Color _heartColor = (widget.like == true) ? Color(0xFFF14D78): Colors.grey;
+
 
   @override
   void initState() {
@@ -43,7 +45,6 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
     double width = MediaQuery.of(context).size.width * 0.828;
     double height = MediaQuery.of(context).size.height * 0.68;
 
-
     return Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -53,7 +54,7 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(vertical: 25),
+                  padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width * 0.063),
                   constraints: BoxConstraints(maxWidth: width),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,8 +74,11 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: MediaQuery.of(context).size.width * 0.025,
+                              horizontal: MediaQuery.of(context).size.width * 0.05
+                          ),
                           child: Text('Написать', style: TextStyle(
                               color: Color(0xFFF14D78),
                               fontWeight: FontWeight.bold,
@@ -97,8 +101,11 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: MediaQuery.of(context).size.width * 0.025,
+                              horizontal: MediaQuery.of(context).size.width * 0.05
+                          ),
                           child: Text('Записаться', style: TextStyle(
                               color: Color(0xFFF14D78),
                               fontWeight: FontWeight.bold,
@@ -122,7 +129,10 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.symmetric(vertical: 4.5, horizontal: 15),
+                          padding: EdgeInsets.symmetric(
+                              vertical: MediaQuery.of(context).size.width * 0.0113,
+                              horizontal: MediaQuery.of(context).size.width * 0.038
+                          ),
                           child: IconTheme(
                               data: IconThemeData(
                                   color: _heartColor,
@@ -187,7 +197,7 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                                 children: <Widget>[
                                   for(var item in widget.works)
                                     Container(
-                                      padding: EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
                                       width: width / 3 * 0.923,
                                       height: width / 3 * 0.923,
                                       child: GestureDetector(
@@ -235,7 +245,7 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                                                   ),
                                                 );
                                               },
-                                            transitionDuration: Duration(milliseconds: 500),
+                                            transitionDuration: Duration(milliseconds: 300),
                                             barrierDismissible: true,
                                             barrierLabel: '',
                                             context: context,

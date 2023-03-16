@@ -7,7 +7,7 @@ const List<Map> masterList = [
     'name': 'Виолетта Дудит',
     'address': 'ул.Пушкина д.Колотушкина, кв1',
     'reviews' : 856,
-    'stars': 5,
+    'stars': 4,
     'like': true,
     'works': [
       'https://n1s1.hsmedia.ru/24/4a/27/244a27f8dbc1db162131de58415c26ca/480x600_1_d6ea0f43c61073652f4625ea8d16b345@1080x1349_0xac120003_7166556151662121640.jpeg',
@@ -46,7 +46,7 @@ const List<Map> masterList = [
     'name': 'Мастер 2',
     'address': 'ул.Крансовка, д4',
     'reviews' : 856,
-    'stars': 5,
+    'stars': 0,
     'like': false,
     'works': [
       "https://i.dummyjson.com/data/products/4/1.jpg",
@@ -66,7 +66,7 @@ const List<Map> masterList = [
     'name': 'Мастер 3',
     'address': 'ул.Крансовка, д5',
     'reviews' : 856,
-    'stars': 5,
+    'stars': 3,
     'like': true,
     'works': [
       "https://i.dummyjson.com/data/products/1/1.jpg",
@@ -86,7 +86,7 @@ const List<Map> masterList = [
     'name': 'Мастре 4',
     'address': 'ул.Крансовка, д6',
     'reviews' : 856,
-    'stars': 5,
+    'stars': 2,
     'like': false,
     'works': [
       "https://i.dummyjson.com/data/products/2/1.jpg",

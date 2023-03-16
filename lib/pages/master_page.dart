@@ -26,6 +26,8 @@ class _MasterPageState extends State<MasterPage> {
   Widget build(BuildContext context) {
     final arguments = (ModalRoute.of(context)?.settings.arguments ?? MasterPage('')) as MasterPage;
 
+
+
     dynamic master;
     for (var element in masterList){
       if (element['name'].toString() == arguments.title) {
@@ -33,8 +35,24 @@ class _MasterPageState extends State<MasterPage> {
       }
     }
 
+    List stars = [];
+    for(var i = 0; i < master['stars']; i++){
+      stars.add(Colors.yellow.shade300);
+    }
+    if (stars.length < 6) {
+      for (var i = 0; i < 5-master['stars']; i++) {
+        stars.add(Colors.grey[500]);
+      }
+    }
+
     final pages = [
-      HomeMasterPage(works: master['works'], services: master['services'], text_of_reviews: master['text_of_reviews'], like: master['like'],),
+      HomeMasterPage(
+        works: master['works'],
+        services: master['services'],
+        text_of_reviews: master['text_of_reviews'],
+        like: master['like'],
+        stars: master['stars'],
+      ),
       ChatPage(),
       SearchPage(),
       MenuPage(),
@@ -161,15 +179,12 @@ class _MasterPageState extends State<MasterPage> {
                                                data: IconThemeData(
                                                  color: Colors.grey[500]
                                                ),
-                                               child:  const Padding(
+                                               child:  Padding(
                                                  padding: EdgeInsets.only(bottom: 4),
                                                  child: Row(
                                                    children: [
-                                                     Icon(Icons.star_rounded),
-                                                     Icon(Icons.star_rounded),
-                                                     Icon(Icons.star_rounded),
-                                                     Icon(Icons.star_rounded),
-                                                     Icon(Icons.star_rounded),
+                                                     for (var item in stars)
+                                                       Icon(Icons.star_rounded, color: item,),
                                                    ],
                                                  ),
                                                )

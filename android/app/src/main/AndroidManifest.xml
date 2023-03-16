@@ -2,7 +2,7 @@
     package="red.project.manik.manicure_appointment">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="manicure_appointment"
+        android:label="Маникюр"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
