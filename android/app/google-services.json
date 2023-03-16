@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "618369843204",
+    "project_id": "my-first-project-f1971",
+    "storage_bucket": "my-first-project-f1971.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618369843204:android:5fb1c28def1f5ca6e2f551",
+        "android_client_info": {
+          "package_name": "red.project.manik.manicure_appointment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618369843204-v1l7ekrum6dl1uh76mugjta67nr8s9ir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvbs__yuNWvfMjVCOuLfF5zUTYsbEwFeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618369843204-v1l7ekrum6dl1uh76mugjta67nr8s9ir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "618369843204-nrj0hplu2u1l75jtjmi9a42tqnebph4n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vanya.com.my"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618369843204:android:5edda3adc92d1759e2f551",
+        "android_client_info": {
+          "package_name": "vanya.com.my_first_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618369843204-v1l7ekrum6dl1uh76mugjta67nr8s9ir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvbs__yuNWvfMjVCOuLfF5zUTYsbEwFeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618369843204-v1l7ekrum6dl1uh76mugjta67nr8s9ir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "618369843204-nrj0hplu2u1l75jtjmi9a42tqnebph4n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vanya.com.my"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
