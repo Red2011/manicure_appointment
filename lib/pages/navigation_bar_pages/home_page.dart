@@ -18,7 +18,7 @@ class HomeMasterPage extends StatefulWidget {
 
 class _HomeMasterPageState extends State<HomeMasterPage> {
 
-  final _animationDuration = const Duration(milliseconds: 900);
+  final _animationDuration = const Duration(milliseconds: 500);
   late Timer _timer;
   late Color _color;
   late final Color _heartColor = (widget.like == true) ? Color(0xFFF14D78): Colors.grey;
@@ -182,8 +182,8 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                               scrollDirection: Axis.vertical,
                               child: Wrap(
                                 alignment: WrapAlignment.start,
-                                spacing: 11.5,
-                                runSpacing: 3,
+                                spacing: MediaQuery.of(context).size.width * 0.029,
+                                runSpacing: MediaQuery.of(context).size.width * 0.0076,
                                 children: <Widget>[
                                   for(var item in widget.works)
                                     Container(
@@ -235,7 +235,7 @@ class _HomeMasterPageState extends State<HomeMasterPage> {
                                                   ),
                                                 );
                                               },
-                                            transitionDuration: Duration(milliseconds: 200),
+                                            transitionDuration: Duration(milliseconds: 500),
                                             barrierDismissible: true,
                                             barrierLabel: '',
                                             context: context,
